@@ -19,3 +19,11 @@ Route::get('/test/{id}', 'CategoryController@show');
 Route::get('/', 'CategoryController@index');
 Route::get('/search', 'ArticleController@search');
 Route::view('/brain', 'show');
+Route::get('/calculations', 'CalculationController@index');
+Route::get('/calculations/{id}', 'CalculationController@calc');
+Route::get('/roles/{roles}', 'CalculationController@roles');
+Route::get('/ai','CalculationController@ai');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

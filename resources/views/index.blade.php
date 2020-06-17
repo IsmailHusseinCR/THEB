@@ -10,21 +10,15 @@
        @endforeach
     @endforeach --}}
 
-    <div class="w-100 px-4 pt-16 bg-red-700">
+
+    <div class="w-100 px-4 pt-16 bg-blue-700">
             <div class="flex flex-col">
                 <div class="h-64 px-30 py-30 text-center text-white font-semibold">
-                    <!-- Hier komt form action search. Search met name=q en die get query handel ik af. --->
-               
                     <h1 class="pt-20 text-5xl">Search your keyword here</h1>
-                    {{-- <p>Like coronavirus</p> --}}
-                    {{-- <form action="/search" method="get">
-                        <input class='text-red-700' name="infosearch" id="infosearch" cols="30" rows="10">
-                        <button type="submit" name="search" value="search" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                    </form> --}}
                     <form action="/search" method="get" class="text-center">
-                        <div class="flex items-center border-b border-b-2 border-teal-500 py-2 ">
-                          <input type="search" name="search" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Like coronavirus" aria-label="Full name">
-                          <button type="submit"  class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                        <div class="flex m-auto  text-center  border-b border-b-2 border-teal-500 py-2 w-1/3 ">
+                          <input type="search" name="search" class="appearance-none bg-transparent border-none w-full text-black-700  leading-tight focus:outline-none" type="text" placeholder="Like coronavirus" aria-label="Full name">
+                          <button type="submit"  class="flex bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text- border-4 text-white py-1 px-2 rounded" type="button">
                          Search
                           </button>
                         </div>
@@ -33,30 +27,73 @@
             </div>
     </div>
 
-{{-- TRY A FIX FOR FA ICONS --}}
-    <div class="w-100 px-4 pt-16">
-        <div class="container flex justify-between h-60 mb-10 text-red-700 font-semibold">
+            {{-- Sectie why TBC--}}
+            <div class="w-100 px-4 pt-16 pb-20 flex flex-col ">
+              <h1 class="justify-center m-auto text-blue-700 font-semibold pb-3 text-2xl">Why The Business Counter?<h1>
+
+                <div class="w-100 flex justify-between">
+                 <div class="flex flex-col">
+                  <i class="fas fa-coins fa-4x text-center"></i>
+                  <p class="font-bold text-2xl">Save money by calculating your profits</p>
+                  <p class="font-semibold text-lg">Machine learning powered calculations to not make mistakes</p>
+                 </div>
+
+                 <div class="flex flex-col">
+                  <i class="fas fa-clock fa-4x text-center"></i>
+                  <p class="font-bold text-2xl">Set a timer to fill in the VAT deductions</p>
+                  <p class="font-semibold text-lg">Don't get fined by getting notifications of The Business Counter</p>
+                 </div>
+
+                 <div class="flex flex-col">
+                  <i class="fab fa-gratipay fa-4x text-center"></i>
+                  <p class="font-bold text-2xl">Recieve handy tips to boost your business</p>
+                  <p class="font-semibold text-lg">Always get the latest tips on this platform </p>
+                 </div>
+                 
+                </div>
+  
+            </div>
+        
+          <div class="w-100 px-4 pt-16 flex flex-col bg-gray-200 ">
+            <div class="w-100 flex ">
+              <div class="flex flex-col">
+                <img src="https://cdn.pixabay.com/photo/2018/01/21/06/13/laptop-3095916_960_720.png" alt="" srcset="">
+              </div>
+
+              <div class="flex flex-col items-center flex-grow justify-center ">
+                <h2 class="font-bold text-5xl text-blue-700">Convenient and simple</h2>
+                <p class="font-semibold text-2xl text-blue-700">Register, Calculate and you're done</p>
+              </div>
+          </div>
+          <div class="w-100 flex ">
+            <div class="flex flex-col items-center flex-grow justify-center">
+              <h2 class="font-bold text-5xl text-blue-700">No longer fiscal jargon</h2>
+              <p class="font-semibold text-2xl text-blue-700">Register, Calculate and you're done</p>
+            </div>
+
+            <div class="flex flex-col items-center flex-grow  ">
+              {{-- <img src="../../img/mobile.png" alt="" srcset=""> --}}
+              <img src='https://www.mupload.nl/img/uxcgj738qjhmp.png'>
+            </div>
+        </div>
+          </div>
+
+
+    <div class="w-100 px-4 pt-16 ">
+      <h1 class="text-5xl text-center pb-8 text-blue-700">Select a category</h1>
+        <div class="w-100 flex justify-between h-60 mb-10 text-blue-700 font-semibold">
             @foreach ($categories->chunk(3) as $chunk)
-                
             <div class="flex flex-col">
                 @foreach ($chunk as $category)
-    
             <p class="pb-4 text-3xl"><a href="test/{{$category->id}}">{{$category->title}}</a> <i class="fas fa-user pl-3"></i></p>
                 @endforeach
- 
-                {{-- <p class="pb-4 text-3xl">Freelance deduction <i class="fas fa-user-tie pl-3"></i></p>
-                <p class="pb-4 text-3xl">Tax Return <i class="fas fa-hand-holding-usd pl-3"></i></p> --}}
             </div>  
             @endforeach
-            {{-- <div class="flex flex-col">
-                <p class="pb-4 text-3xl">Brexit <i class="fas fa-pound-sign pl-3"></i></p>
-                <p class="pb-4 text-3xl">Business profit exemption <i class="fas fa-suitcase pl-3"></i></p>
-                <p class="pb-4 text-3xl">VAT deduction <i class="fas fa-landmark pl-3"></i></p>
-            </div>  
-        </div> --}}
 
+      </div>
     </div>
-    <div class="w-100 px-4 pt-16 bg-gray">
+
+    {{-- <div class="w-100 px-4 pt-16 bg-gray">
         <h1 class="text-4xl text-center"> Tips</h1>
             <div class="flex flex-row justify-between ">
             
@@ -104,18 +141,19 @@
                     </div>
                   </div>
                   
-            </div>
+            </div> --}}
                  
-  
-    {{-- TIPS SECTION (LIKE JURIDISCH LOKET--}}
-    {{-- <div class="w-100 px-4 pt-16 bg-black">
-        <div class="container flex justify-between">
-            <div class="flex flex-col">
-                
-                <p><a href="/search/1">Starters deduction </a></p>
-                <p>Freelance deduction</p>
-                <p>Tax Return</p>
-            </div> 
-    </div> --}}
-    
+            <div class="w-100 px-4 pt-16 bg-blue-500">
+              <div class="w-100 flex justify-between">
+                <div class="flex flex-col">
+                 <p class="font-bold text-3xl">Not found what you are searching for?</p>
+                 <p class="font-semibold text-lg">Call us at +31684429630</p>
+                </div>
+
+                <div class="flex flex-col">
+                 <p>Or email us ihussein@tbc.com</p>
+                </div>
+
+               </div>
+            </div>
 @endsection

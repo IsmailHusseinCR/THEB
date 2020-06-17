@@ -18,17 +18,20 @@
         <div class="container mx-auto flex items-center justify-between px-4 py-6">
             <ul class="flex items-center">
                 <li>
-                    <a href="#">The Business Counter</a>
+                    <a class="font-bold text-2xl text-blue-700" href="#">The Business Counter</a>
                     
                 </li>
    
             </ul>
             <ul class="flex">
                 <li>
-                    <a href="#">Calculations</a>
+                    <a class="font-semibold  text-blue-700" href="#">Calculations</a>
                 </li>
                 <li class="ml-16">
-                    <a href="#">Contacts</a>
+                    <a class="font-semibold text-blue-700" href="{{ route('login') }}">Login</a>
+                </li>
+                 <li class="ml-16">
+                    <a class="font-semibold text-blue-700" href="">NL</a>
                 </li>
             </ul>
         </div>

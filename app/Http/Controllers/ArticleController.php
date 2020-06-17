@@ -15,5 +15,6 @@ class ArticleController extends Controller
         $value = $request->get('search');
         $articles = DB::table('articles')->where('name', 'like', '%'.$value.'%')->paginate(5);
         dd($articles);
+        // TODO: CREATE VIEW VOOR SEARCH
     }
 }

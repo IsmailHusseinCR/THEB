@@ -15,6 +15,14 @@
 
 // TODO: LEES DE URL UIT de search en stop die in querystring. Machinelearnng moet overeen komen me de trainingsdata die ik heb
 
+// Feedback- Hoe ga ik beter implementeren. 
+// Mocht ik een beter idee hebben delen met Nathalie
+
+
+// Hoe ga ik dit gebruiken
+
+// Misschien gebruiken met rekenhulp 
+
 // window.onload = function(){
 //     const trainingdata = [
 //     'Coronavirus',
@@ -32,7 +40,7 @@
 //         console.log(stats)
 //     }
 // })
-// const queryString = 'Tax'
+// const queryString = 'Brexit'
 // console.log(queryString + network.run(queryString)) 
 // }
 
